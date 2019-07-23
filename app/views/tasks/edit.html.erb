@@ -1,0 +1,13 @@
+<<h1>Edit task</h1>
+
+<%= form_for(@task) do |f| %>
+<!-- if we want to change de name we do it this way: -->
+<div><%= f.label :title, "Title"%>
+  <%= f.text_field :title %></div>
+<!-- if not, we dont need to add anything, just like this: -->
+<div><%= f.label :details %>
+  <%= f.text_field :details %></div>
+<%= f.submit %>
+<% end %>
+
+<p><%= link_to "Back to list", tasks_path %></p>
